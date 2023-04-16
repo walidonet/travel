@@ -38,5 +38,8 @@
         "vue": "^2.6.12",
         "vue-form-generator": "^2.3.4",
         "vuedraggable": "^2.23.2"
+    },
+    "install": {
+        "frozen-lockfile": true
     }
 }
