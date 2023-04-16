@@ -1,9 +1,13 @@
 services:
     - name: web
       buildCommand: 'composer install --optimize-autoloader --no-dev'
+      script: |
+          sudo apt-get update
+          sudo apt-get install -y php-curl
       startCommand: 'php artisan serve --host 0.0.0.0 --port $PORT'
       healthCheckPath: '/'
 
       env:
           - key: APP_ENV
             value: production
+            WEB_MEMORY_PHP_VERSION: 7.4
